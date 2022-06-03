@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // 모달창
     let modal_close = $('.modal-close');
     let modal = $('.modal');
     modal_close.click(function () {
@@ -60,25 +61,23 @@ $(document).ready(function () {
 
 
 
-
 });
+
 window.onload = function () {
     // visual slide
     let swVisual = new Swiper('.sw-visual', {
         loop: true,
-        autoplay: {
-            delay: 2000,
-        },
         navigation: {
             prevEl: '.sw-visual-prev',
             nextEl: '.sw-visual-next'
         }
     });
-    let swstory = new Swiper('.sw-story', {
+    // story slide
+    let swStory = new Swiper('.sw-story', {
         loop: true,
         autoplay: {
             delay: 1000,
-            disableoninteraction: false
+            disableOnInteraction: false,
         },
         speed: 1000,
         navigation: {
@@ -86,26 +85,28 @@ window.onload = function () {
             nextEl: '.sw-story-next'
         }
     });
-    let sw_good = new Swiper('.sw-good', {
+    // good slide
+    let swGood = new Swiper('.sw-good', {
         loop: true,
-        pagination: {
-            el: '.sw-good-pg',
-            clickable: true
-        },
         autoplay: {
             delay: 1000,
-            disableoninteraction: false
+            disableOnInteraction: false,
         },
         speed: 1000,
         navigation: {
             prevEl: '.sw-good-prev',
             nextEl: '.sw-good-next'
+        },
+        pagination: {
+            el: '.sw-good-pg',
+            clickable: true
         }
     });
-    // 상단이동버튼
+
+    // 상단이동 버튼
     $('.gotop').click(function () {
         $('html').animate({
-            scrolltop: 0
+            scrollTop: 0
         }, 500);
-    })
-};
+    });
+}

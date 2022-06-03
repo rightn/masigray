@@ -44,16 +44,19 @@ html {
   width: 100%;
   margin: 0 auto;
 }
-.modal{
+
+/* 모달창*/
+.modal {
   position: fixed;
-  left:0;
-  top:0;
-  display:block;
-  width:100%;
-  height:100%;
-  background-color:rgba(0,0,0,0.7);
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 99999;
 }
+
 .modal-wrap {
   position: absolute;
   left: 50%;
@@ -64,7 +67,6 @@ html {
   height: 250px;
   background-color: #fff;
   border-radius: 10px;
-  z-index:99999999;
 }
 
 .modal-close {
@@ -87,6 +89,7 @@ html {
   text-align: center;
 
 }
+
 
 .gotop {
   position: fixed;
@@ -1013,7 +1016,7 @@ body {
   display: block;
   width: 55px;
   height: 98px;
-  background: url("../images/good_prev.png") no-repeat;
+  background: url("../images/good_prev.png") no-repeat center;
   background-size: cover;
   cursor: pointer;
   border: 0;
@@ -1030,7 +1033,7 @@ body {
   display: block;
   width: 55px;
   height: 98px;
-  background: url("../images/good_next.png") no-repeat;
+  background: url("../images/good_next.png") no-repeat center;
   background-size: cover;
   cursor: pointer;
   border: 0;
@@ -1043,8 +1046,13 @@ body {
 }
 
 @media all and (max-width: 1000px) {
+  .good {
+    width: 95%;
+    margin: 0 auto;
+  }
+
   .good .container {
-    padding: 100px 0;
+    padding: 10vw 0;
   }
 
   .good .sw-good {
@@ -1077,7 +1085,7 @@ body {
 .franchiser {
   position: relative;
   display: block;
-  padding: 100px;
+  padding: 100px 0;
 }
 
 .franchiser::after {
@@ -1100,15 +1108,15 @@ body {
   text-align: center;
 }
 
-.franchiser .container h2 p {
+.franchiser .container h2 strong {
+  font-weight: 500;
+}
+
+.franchiser .container p {
   color: #666;
   font-size: 20px;
   text-align: center;
   margin-bottom: 50px;
-}
-
-.franchiser .container h2 strong {
-  font-weight: 500;
 }
 
 .franchiser .container .fr-wrap ul {
@@ -1189,7 +1197,7 @@ body {
   font-weight: 500;
 }
 
-.sns .container>h2>p {
+.sns .container>p {
   color: #666;
   font-size: 16px;
   text-align: center;
