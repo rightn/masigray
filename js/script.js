@@ -1,5 +1,9 @@
 $(document).ready(function () {
-
+    let modal_close = $('.modal-close');
+    let modal = $('.modal');
+    modal_close.click(function () {
+        modal.hide();
+    });
     // 주메뉴 모션 적용
     let nav = $('.nav');
     let headerMain = $('.header-main');
@@ -58,19 +62,19 @@ $(document).ready(function () {
 
 
 });
-window.onload= function () {
-     // visual slide
-     let swVisual = new Swiper('.sw-visual',{
+window.onload = function () {
+    // visual slide
+    let swVisual = new Swiper('.sw-visual', {
         loop: true,
         autoplay: {
             delay: 2000,
         },
         navigation: {
-            prevEl : '.sw-visual-prev',
-            nextEl : '.sw-visual-next'
+            prevEl: '.sw-visual-prev',
+            nextEl: '.sw-visual-next'
         }
     });
-     let swstory = new Swiper('.sw-story',{
+    let swstory = new Swiper('.sw-story', {
         loop: true,
         autoplay: {
             delay: 1000,
@@ -78,15 +82,15 @@ window.onload= function () {
         },
         speed: 1000,
         navigation: {
-            prevEl : '.sw-story-prev',
-            nextEl : '.sw-story-next'
+            prevEl: '.sw-story-prev',
+            nextEl: '.sw-story-next'
         }
     });
-     let sw_good = new Swiper('.sw-good',{
+    let sw_good = new Swiper('.sw-good', {
         loop: true,
-        pagination:{
-            el:'.sw-good-pg',
-            clickable:true
+        pagination: {
+            el: '.sw-good-pg',
+            clickable: true
         },
         autoplay: {
             delay: 1000,
@@ -94,14 +98,14 @@ window.onload= function () {
         },
         speed: 1000,
         navigation: {
-            prevEl : '.sw-good-prev',
-            nextEl : '.sw-good-next'
+            prevEl: '.sw-good-prev',
+            nextEl: '.sw-good-next'
         }
     });
     // 상단이동버튼
-    $('.gotop').click(function(){
+    $('.gotop').click(function () {
         $('html').animate({
-            scrolltop:0
-        },500);
+            scrolltop: 0
+        }, 500);
     })
 };
